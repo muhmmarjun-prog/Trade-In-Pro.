@@ -1,0 +1,23 @@
+name: Build Trade-In Pro APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download repository
+        uses: actions/checkout@v4
+
+      - name: Check uploaded files
+        run: |
+          echo "Memeriksa file proyek Trade-In Pro"
+          ls -la
+          find . -maxdepth 3 -type f
+
+      - name: Prepare build information
+        run: |
+          echo "Repository berhasil diperiksa."
+          echo "Langkah berikutnya adalah menyiapkan proyek Android."
